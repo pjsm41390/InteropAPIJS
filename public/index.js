@@ -4,23 +4,15 @@ function handleIncomingContext(contextInfo) {
         case 'instrument':
             handleInstrumentContext(contextInfo);
             break;
-        case 'country':
-            handleCountryContext(contextInfo);
-            break;
-
         default:
             break;
     }
 }
 
-
 function handleInstrumentContext(contextInfo) {
     const { type, id } = contextInfo;
     document.getElementById("p1").innerHTML = id.ticker;
-}
-
-function handleCountryContext(contextInfo) {
-    const { type, id } = contextInfo;
+    //add rest calls 
 }
 
 fin.me.interop.addContextHandler(handleIncomingContext);
